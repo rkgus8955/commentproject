@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="test">안녕</div>
     <img src="{% static 'image/IMG_6295.jpg' %}">
+    {% for post in posts.all %}
+    <a href="{% url 'blog:post_detail' post.id %}">
+        <div>{{ post.title }}</div>
+        <div>{{ post.create_date }}</div>
+        <div>{{ post.body }}</div>
+    </a>
+    {% endfor %}
 </body>
+
 </html>
