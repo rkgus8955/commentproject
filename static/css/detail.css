@@ -1,0 +1,14 @@
+.detail_box{
+    margin: 3%;
+}
+.detail_title{
+    font-size: 25px;
+}
+.detail_time{
+    font-size: 14px;
+
+}
+.detail_body{
+    font-size: 17px;
+    margin-bottom: 50px;
+}
